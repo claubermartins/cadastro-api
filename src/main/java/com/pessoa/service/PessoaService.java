@@ -2,8 +2,8 @@ package com.pessoa.service;
 
 import com.pessoa.model.Pessoa;
 import com.pessoa.repository.PessoaRepository;
-//import com.pessoa.exceptions.DuplicatedResourceException;
-//import com.pessoa.exceptions.ResourceNotFoundException;
+import com.pessoa.exceptions.DuplicatedResourceException;
+import com.pessoa.exceptions.ResourceNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -49,24 +49,21 @@ public class PessoaService {
         if(podeSalvar)
             return pessoaRepository.save(pessoa);
         else
-            return pessoaRepository.save(pessoa);
-      //      throw new DuplicatedResourceException();
+            throw new DuplicatedResourceException();
     }
     Pessoa update(Pessoa pessoa){ //aqui é feito o put
         var podeAtualizar = pessoa.getId() == null && pessoaRepository.findByCpf(pessoa.getCpf()).isPresent();
         if (podeAtualizar)
             return pessoaRepository.save(pessoa);
         else
-            return pessoaRepository.save(pessoa);
-        //    throw new ResourceNotFoundException();
+            throw new ResourceNotFoundException();
     }
     void delete(Pessoa pessoa){
         var podeDeletar = pessoa.getId() != null && pessoaRepository.findByCpf(pessoa.getCpf()).isPresent();
         if (podeDeletar)
             pessoaRepository.delete(pessoa);
         else
-            pessoaRepository.delete(pessoa);
-        //    throw new ResourceNotFoundException();
+            throw new ResourceNotFoundException();
     }
 }
 
