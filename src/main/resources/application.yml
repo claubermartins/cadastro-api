@@ -12,9 +12,9 @@ spring:
 spring:
   profiles: dev
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: 123
+    url: jdbc:postgresql://localhost:5432/cadastro-api
+    username: cadastro-api
+    password: 1234
 
   jpa:
     show-sql: true
