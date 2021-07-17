@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity //para a classe se tornar uma tabela permitindo mapear entre o obj e a tabela
-@Data //faz oo get set acontecer e gera duas funções importantes que são o icons e reshecode para conectar com o banco
+@Data //faz oo get set acontecer e gera duas funções importantes que são o icons e hashcode para conectar com o banco
 @NoArgsConstructor
 @AllArgsConstructor
 public class Pessoa {
