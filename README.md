@@ -9,7 +9,7 @@ API RESTful em java utilizando springboot framework.
 
 ## Preparando Ambiente
 * ```mvn clear install```
-* Crie o banco com o nome ```postgres```
+* Crie o banco com o nome ```cadastro-api``
 * Observe o usuário e senha no arquivo ```application.yml```
 
 ## Instruções Iniciais para testar a api
