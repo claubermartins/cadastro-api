@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: cadastro-api
-          image: claubermartins/cadastro-api:4.0 #imagem da aplicação pdock
+          image: claubermartins/cadastro-api:1.0 #imagem da aplicação pdock
           ports:
             - containerPort: 8080
           env:   # Setting Enviornmental Variables
