@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-conf
+data:
+  host: postgres #nome do banco
+  name: cadastro  #as tabelas

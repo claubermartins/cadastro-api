@@ -17,7 +17,11 @@ import java.util.Optional;
 // a partir daqui vamos usar o repositório
 //primeiro criar pois é a parti daqui que vamos ter acesso aos métodos
 public class PessoaService {
+<<<<<<< HEAD
    //aqui primeiro injetamos o repositório pelo autowired
+=======
+    //aqui primeiro injetamos o repositório pelo autowired
+>>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
     @Autowired
     private PessoaRepository pessoaRepository;
     public PessoaService(PessoaRepository pessoaRepository){
@@ -28,7 +32,11 @@ public class PessoaService {
         return pessoaRepository.findAll(pageable);
     }
     public List<Pessoa> obterTodos(){
+<<<<<<< HEAD
        return pessoaRepository.findAll();//retorna a lista da nossa entidade e o findall já está implementada pelo jpa(herança)
+=======
+        return pessoaRepository.findAll();//retorna a lista da nossa entidade e o findall já está implementada pelo jpa(herança)
+>>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
     }
     public Optional<Pessoa> buscarPorId(Long id){
         return pessoaRepository.findById(id);
@@ -44,22 +52,37 @@ public class PessoaService {
     }
     //acima é para o get para requisição HTTP
     //abaixo é o crud
+<<<<<<< HEAD
         public Pessoa salvar(Pessoa pessoa){ //aqui é feito o post
         var podeSalvar = pessoa.getId() == null && pessoaRepository.findByCpf(pessoa.getCpf()).isEmpty();
+=======
+    public Pessoa salvar(Pessoa pessoa){ //aqui é feito o post
+        //Boolean podeSalvar = pessoa.getId() == null && pessoaRepository.findByCpf(pessoa.getCpf()).isPresent();
+        Boolean podeSalvar = pessoa.getId() == null;
+>>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
         if(podeSalvar)
             return pessoaRepository.save(pessoa);
         else
             throw new DuplicatedResourceException();
     }
+<<<<<<< HEAD
         public Pessoa update(Pessoa pessoa){ //aqui é feito o put
         var podeAtualizar = pessoa.getId() != null && pessoaRepository.findByCpf(pessoa.getCpf()).isPresent();
+=======
+    public Pessoa update(Pessoa pessoa){ //aqui é feito o put
+        Boolean podeAtualizar = pessoa.getId() != null && pessoaRepository.findByCpf(pessoa.getCpf()).isPresent();
+>>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
         if (podeAtualizar)
             return pessoaRepository.save(pessoa);
         else
             throw new ResourceNotFoundException();
     }
     public void delete(Pessoa pessoa){
+<<<<<<< HEAD
         var podeDeletar = pessoa.getId() != null && pessoaRepository.findByCpf(pessoa.getCpf()).isPresent();
+=======
+        Boolean podeDeletar = pessoa.getId() != null && pessoaRepository.findByCpf(pessoa.getCpf()).isPresent();
+>>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
         if (podeDeletar)
             pessoaRepository.delete(pessoa);
         else
