@@ -1,5 +1,5 @@
 # cadastro-api
-API RESTful em java utilizando springboot framework, Docker para conteinerização contêineres e Kubernetes para orquestração de contêineres.
+API RESTful em java utilizando springboot framework, Docker para conteinerização de contêineres e Kubernetes para orquestração de contêineres.
 
 ## Requisitos
 * Java 11
