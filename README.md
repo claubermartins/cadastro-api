@@ -20,3 +20,6 @@ API RESTful em java utilizando springboot framework, Docker para conteinerizaç�
 
 ## Instruções Iniciais para testar a api
 * Utilize o ```postman``` criando um request para testar o funcionamento da api utilizando os métodos HTTP: GET, POST, PUT e DELETE.
+
+## Maiores Informações
+* <p align="left"><a href="https://hub.docker.com/r/claubermartins/cadastro-api/tags?page=1&ordering=last_updated">Link do repositório com a imagem Docker</a></p>
