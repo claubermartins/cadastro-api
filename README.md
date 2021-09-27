@@ -1,5 +1,5 @@
 # cadastro-api
-API RESTful em java utilizando springboot framework, Docker para conteinerização de contêineres e Kubernetes para orquestração de contêineres.
+API RESTful em java para cadastramento de usuários utilizando springboot framework, Docker para conteinerização de contêineres e Kubernetes para orquestração de contêineres.
 
 ## Requisitos
 * Java 11
@@ -9,7 +9,12 @@ API RESTful em java utilizando springboot framework, Docker para conteinerizaç�
 * Docker
 * Kubernetes
 
-## Preparando Ambiente
+## Preparando Ambiente de Desenvolvimento
+* ```mvn clear install```
+* Crie o banco com o nome ```cadastro-api```
+* Observe o usuário e senha no arquivo ```application.yml```
+
+## Preparando Ambiente de Produção
 * ```mvn clean```
 * ```mvn install -DskipTests=true```
 * Gere a imagem do Docker ```docker build -t cadastro-api.jar .```
