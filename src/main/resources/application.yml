@@ -5,22 +5,16 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
   profiles:
-    active: dev
+    active: prod
 
 ---
 
 spring:
   profiles: dev
   datasource:
-<<<<<<< HEAD
     url: jdbc:postgresql://localhost:5432/cadastro-api
     username: cadastro-api
     password: 1234
-=======
-    url: jdbc:postgresql://${DB_HOST}:5432/${DB_NAME}
-    username: ${POSTGRES_USER}
-    password: ${POSTGRES_PASSWORD}
->>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
 
   jpa:
     show-sql: true
@@ -32,21 +26,11 @@ spring:
 spring:
   profiles: prod
   datasource:
-<<<<<<< HEAD
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: 123
-=======
     url: jdbc:postgresql://${DB_HOST}:5432/${DB_NAME}
     username: ${POSTGRES_USER}
     password: ${POSTGRES_PASSWORD}
->>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
 
   jpa:
     show-sql: false
     hibernate:
-<<<<<<< HEAD
       ddl-auto: update
-=======
-      ddl-auto: update
->>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
