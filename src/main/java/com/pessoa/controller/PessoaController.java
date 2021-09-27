@@ -15,10 +15,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-<<<<<<< HEAD
-=======
 import java.net.URI;
->>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
 import java.util.List;
 import java.util.Optional;
 
@@ -39,41 +36,24 @@ public class PessoaController {
     @GetMapping
     //requisição http administrada pela ResponseEntity
     ResponseEntity<List<Pessoa>> obterTodos() {
-<<<<<<< HEAD
-        var pessoas = pessoaService.obterTodos();
-=======
         List<Pessoa> pessoas = pessoaService.obterTodos();
->>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
         return ResponseEntity.ok(pessoas);
     }
 
     @GetMapping("{id}")
     ResponseEntity<Optional<Pessoa>> obterPorId(@PathVariable Long id) {
-<<<<<<< HEAD
-        var pessoas = pessoaService.buscarPorId(id);
-=======
         Optional<Pessoa> pessoas = pessoaService.buscarPorId(id);
->>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
         return ResponseEntity.ok(pessoas);
     }
     @PostMapping
     ResponseEntity<Pessoa> salvar(@RequestBody Pessoa pessoa){
-<<<<<<< HEAD
-        var pessoaSalva = pessoaService.salvar(pessoa);
-        var uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(pessoa.getId()).toUri();
-=======
         Pessoa pessoaSalva = pessoaService.salvar(pessoa);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(pessoa.getId()).toUri();
->>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
         return ResponseEntity.created(uri).body(pessoa);
     }
     @PutMapping
     ResponseEntity<Pessoa>update(@RequestBody Pessoa pessoa){
-<<<<<<< HEAD
-        var pessoaUpdated = pessoaService.update(pessoa);
-=======
         Pessoa pessoaUpdated = pessoaService.update(pessoa);
->>>>>>> cc01e4bff4e0e75ecc61450ed3094809a95d59fb
         return ResponseEntity.ok(pessoaUpdated);
     }
     @DeleteMapping
