@@ -10,7 +10,7 @@ API RESTful em java para cadastramento de usuários utilizando springboot framew
 * Kubernetes
 
 ## Preparando Ambiente de Desenvolvimento
-* ```mvn clear install```
+* ```mvn clean install```
 * Crie o banco com o nome ```cadastro-api```
 * Observe o usuário e senha no arquivo ```application.yml```
 
