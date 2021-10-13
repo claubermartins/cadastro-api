@@ -2,7 +2,7 @@
 API RESTful em java para cadastramento de usuários utilizando springboot framework, Docker para conteinerização de contêineres e Kubernetes para orquestração de contêineres.
 
 ## Requisitos
-* Java 11
+* Java 8
 * postgresql 13*
 * Maven 4.0
 * Spring Boot 2.5.2
